@@ -1,5 +1,14 @@
- @margin:      15px;
- @border-radius: 5px;
+  @margin:      20px;
+  @border-radius: 5px;
+  
+  @color-text: #676c7a;
+  @color-link: #0099ff;
+  @color-primary: #31c3a6;
+  @color-separator: #e9edf0;
+  @color-background: #e9edf0;
+
+  @container-shadow: #d0d0d0;
+  @border-radius-rounded: 50%;
 
  * {
       transition: width 2s;
@@ -8,13 +17,19 @@
 
     html, body, ul, li, h1,h2,h3,h4,h5,h6 {margin: 0;padding: 0;list-style: none;}
     h1,h2,h3,h4,h5,h6 {  margin-top: @margin;}
-    a {color: #0099ff; text-decoration: none;}
+    a {
+      color: @color-link;
+      text-decoration: none;
+    }
 
-    p { margin: @margin;}
+    p { 
+      margin: @margin;
+    }
+
     body {
       background: #f1f4f8;
       font-family: "Source sans pro", Roboto, Helvetica, Arial; 
-      color: #676c7a;
+      color: @color-text;
       font-size: 16px;
       line-height: 1.45;
       font-weight: 400;
@@ -22,11 +37,11 @@
       font-smoothing: antialiased;
       -webkit-font-smoothing: antialiased;
 
-       }
+    }
 
        hr {
         border:0; 
-        border-top: 1px solid #e9edf0;
+        border-top: 1px solid @color-separator;
         margin: @margin 0;
       }
 
@@ -53,20 +68,21 @@
     }
 
 
-      .box {               
-        padding: 25px;        
-        flex-flow: row wrap;
-        margin: @margin;
-        background: #fff;
-        
-        border-radius: @border-radius;
-        min-width: 230px;
-        box-shadow: 0px 1px 3px #d0d0d0 ;     
-      }
+    .box {               
+      padding: 15px;        
+      flex-flow: row wrap;
+      margin: @margin;
+      background: #fff;      
+      border-radius: @border-radius;
+      min-width: 230px;
+      box-shadow: 0px 1px 3px @container-shadow ;
 
-      .box p {
+      p {
         margin: 0;
-      }
+      }     
+    }
+
+   
 
       .box-title {
         color: #31c3a6;
@@ -85,7 +101,7 @@
           flex:1;
           line-height: 44px;
           background: #fff;
-          box-shadow: 0px 1px 3px #d0d0d0;
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
           transition: flex 0.5s;
             &:hover {
               color: #fff;
@@ -134,25 +150,26 @@
      
 
       .gallery {
-        .container {
-          img {
+        .actions {
+        display: flex;                 
+         align-items:flex-end;
+         padding: @margin 0;
+        }
+
+        .infos {
+         margin-bottom: @margin;
+         img {
             width: 100%;
             height: 100%;
           }
         }
-        .actions {
-          display: flex;
-         justify-content:center;         
-         align-items:flex-end; 
-        }
-        .infos {
-         margin-bottom: @margin;
-        }
+
         .box {
           flex :1;
           background: #fff;
           display: flex;
         }
+
         .btn {
         display: flex;
         align-items:flex-end;
@@ -163,8 +180,98 @@
         text-decoration: none;
         text-align: center;
         font-weight: 700;
+        box-shadow: 0 1px 0 @container-shadow;
+        text-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
+
+          &:hover {
+            background: #ee9900;
+          }
+        }
+
+        .bottom {
+        align-self:flex-end;
+        min-width: 100%;
+        }
+
+        .profil {
+          padding-top: @margin;
+          border-top: 1px solid @color-separator;
         }
       }
+
+      
+
+      .profil {
+        display: flex;
+        
+        .profil_infos {
+          margin-left: 10px;
+          .pseudo {
+            font-weight: 600;
+          }
+          .note {height: 14px;}
+        }
+      }
+
+      .avatar {        
+        width: 52px;
+
+        img {
+          border-radius: @border-radius-rounded;
+          margin-right: 5px;
+          width: 44px;
+        }                  
+      }
+
+      .reviews {
+        .review {
+          flex-direction: row;
+          display: flex;
+          padding-top: @margin;
+
+          &:first-child {
+            padding-top: 0;
+          }
+
+          .profil {
+            flex: 1;
+            flex-direction: row;
+            align-self: start;
+            min-width: 200px;
+          }
+
+          .comment {
+            display: flex;
+            flex: 4;
+            flex-direction: column;
+            border-bottom: 1px solid @color-separator;
+            padding-bottom: @margin;
+          }
+
+          .comment_title {
+            font-size: 16px;
+            font-weight: 600;
+          }
+
+          .comment_content {
+            font-size: 14px;
+          }
+
+          .comment_date {
+            font-size: 14px;
+            color: #c4c9cc;
+          }
+        &:last-child {
+          .comment {
+            border: 0;
+            padding-bottom: 0;
+          }
+        }
+        }
+      }
+
+
+     
 
       .plan ul {
         display: flex;
@@ -185,3 +292,4 @@
       .plan svg {
         width: 60px;
       }
+

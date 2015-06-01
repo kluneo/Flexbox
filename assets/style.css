@@ -22,14 +22,14 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 a {
   color: #0099ff;
   text-decoration: none;
 }
 p {
-  margin: 15px;
+  margin: 20px;
 }
 body {
   background: #f1f4f8;
@@ -45,7 +45,7 @@ body {
 hr {
   border: 0;
   border-top: 1px solid #e9edf0;
-  margin: 15px 0;
+  margin: 20px 0;
 }
 .sitebody {
   max-width: 1000px;
@@ -64,13 +64,13 @@ hr {
   align-items: stretch;
 }
 .box {
-  padding: 25px;
+  padding: 15px;
   flex-flow: row wrap;
-  margin: 15px;
+  margin: 20px;
   background: #fff;
   border-radius: 5px;
   min-width: 230px;
-  box-shadow: 0px 1px 3px #d0d0d0 ;
+  box-shadow: 0px 1px 3px #d0d0d0;
 }
 .box p {
   margin: 0;
@@ -80,7 +80,7 @@ hr {
   font-weight: 900;
 }
 nav {
-  margin: 15px;
+  margin: 20px;
 }
 nav ul {
   list-style: none;
@@ -91,7 +91,7 @@ nav ul li {
   flex: 1;
   line-height: 44px;
   background: #fff;
-  box-shadow: 0px 1px 3px #d0d0d0;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
   transition: flex 0.5s;
 }
 nav ul li:hover {
@@ -120,17 +120,17 @@ nav ul li:last-child {
   align-content: stretch;
   flex-flow: row wrap;
 }
-.gallery .container img {
-  width: 100%;
-  height: 100%;
-}
 .gallery .actions {
   display: flex;
-  justify-content: center;
   align-items: flex-end;
+  padding: 20px 0;
 }
 .gallery .infos {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+}
+.gallery .infos img {
+  width: 100%;
+  height: 100%;
 }
 .gallery .box {
   flex: 1;
@@ -147,6 +147,75 @@ nav ul li:last-child {
   text-decoration: none;
   text-align: center;
   font-weight: 700;
+  box-shadow: 0 1px 0 #d0d0d0;
+  text-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
+}
+.gallery .btn:hover {
+  background: #ee9900;
+}
+.gallery .bottom {
+  align-self: flex-end;
+  min-width: 100%;
+}
+.gallery .profil {
+  padding-top: 20px;
+  border-top: 1px solid #e9edf0;
+}
+.profil {
+  display: flex;
+}
+.profil .profil_infos {
+  margin-left: 10px;
+}
+.profil .profil_infos .pseudo {
+  font-weight: 600;
+}
+.profil .profil_infos .note {
+  height: 14px;
+}
+.avatar {
+  width: 52px;
+}
+.avatar img {
+  border-radius: 50%;
+  margin-right: 5px;
+  width: 44px;
+}
+.reviews .review {
+  flex-direction: row;
+  display: flex;
+  padding-top: 20px;
+}
+.reviews .review:first-child {
+  padding-top: 0;
+}
+.reviews .review .profil {
+  flex: 1;
+  flex-direction: row;
+  align-self: start;
+  min-width: 200px;
+}
+.reviews .review .comment {
+  display: flex;
+  flex: 4;
+  flex-direction: column;
+  border-bottom: 1px solid #e9edf0;
+  padding-bottom: 20px;
+}
+.reviews .review .comment_title {
+  font-size: 16px;
+  font-weight: 600;
+}
+.reviews .review .comment_content {
+  font-size: 14px;
+}
+.reviews .review .comment_date {
+  font-size: 14px;
+  color: #c4c9cc;
+}
+.reviews .review:last-child .comment {
+  border: 0;
+  padding-bottom: 0;
 }
 .plan ul {
   display: flex;
