@@ -1,0 +1,16 @@
+{
+  "name": "flexbox",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "grunt": "^0.4.5"
+  },
+  "devDependencies": {
+    "grunt-contrib-cssmin": "^0.12.3",
+    "grunt-contrib-htmlmin": "^0.4.0",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "author": "",
+  "license": "ISC"
+}
