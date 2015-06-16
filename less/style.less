@@ -10,17 +10,50 @@
   @container-shadow: #d0d0d0;
   @border-radius-rounded: 50%;
 
- * {
+  /**************** COMPONENTS ****************/   
+
+    * {
       transition: width 2s;
       -webkit-transition: width 2s;
     }
 
     html, body, ul, li, h1,h2,h3,h4,h5,h6 {margin: 0;padding: 0;list-style: none;}
-    h1,h2,h3,h4,h5,h6 {  margin-top: @margin;}
+    h1,h2,h3,h4,h5,h6 {margin-top: @margin;}
     a {
       color: @color-link;
       text-decoration: none;
     }
+
+    a.btn {
+      border-radius: @border-radius;
+      background-color: @color-primary;
+      padding: @margin / 2 @margin;
+      color: contrast(@color-primary);
+      display: block;
+      text-align: center;
+
+      &:hover {
+        background-color: desaturate(@color-primary, 10%);
+      }
+    }
+
+    .list {
+      margin:@margin 0;
+
+      li {
+
+        border-top: 1px solid @color-separator;
+        a {
+          display: block;
+          padding: @margin/2;
+          
+          &:hover {
+            background-color: @color-background;
+          }
+        }
+      }
+    } 
+
 
     p { 
       margin: @margin;
@@ -57,6 +90,12 @@
     .flex_2 {
           flex : 2;
         }
+
+    .avatar {  
+      img {
+        border-radius: @border-radius-rounded;
+      }
+    }  
 
 
 
@@ -213,15 +252,7 @@
         }
       }
 
-      .avatar {        
-        width: 52px;
-
-        img {
-          border-radius: @border-radius-rounded;
-          margin-right: 5px;
-          width: 44px;
-        }                  
-      }
+     
 
       .reviews {
         .review {
@@ -238,6 +269,15 @@
             flex-direction: row;
             align-self: start;
             min-width: 200px;
+          }
+
+          .avatar {        
+            width: 52px;
+
+            img {
+              margin-right: 5px;
+              width: 44px;
+            }                  
           }
 
           .comment {
@@ -270,7 +310,17 @@
         }
       }
 
+/**************** USER ****************/    
+      .user {
+        .avatar {        
+          width: 50%;
+          margin: auto;
 
+          img {
+            width: 100%;
+          }
+        }  
+      }
      
 
       .plan ul {

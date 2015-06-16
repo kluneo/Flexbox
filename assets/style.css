@@ -1,3 +1,4 @@
+/**************** COMPONENTS ****************/
 * {
   transition: width 2s;
   -webkit-transition: width 2s;
@@ -28,6 +29,30 @@ a {
   color: #0099ff;
   text-decoration: none;
 }
+a.btn {
+  border-radius: 5px;
+  background-color: #31c3a6;
+  padding: 10px 20px;
+  color: #ffffff;
+  display: block;
+  text-align: center;
+}
+a.btn:hover {
+  background-color: #3db79f;
+}
+.list {
+  margin: 20px 0;
+}
+.list li {
+  border-top: 1px solid #e9edf0;
+}
+.list li a {
+  display: block;
+  padding: 10px;
+}
+.list li a:hover {
+  background-color: #e9edf0;
+}
 p {
   margin: 20px;
 }
@@ -56,6 +81,9 @@ hr {
 }
 .flex_2 {
   flex: 2;
+}
+.avatar img {
+  border-radius: 50%;
 }
 .container {
   display: flex;
@@ -173,14 +201,6 @@ nav ul li:last-child {
 .profil .profil_infos .note {
   height: 14px;
 }
-.avatar {
-  width: 52px;
-}
-.avatar img {
-  border-radius: 50%;
-  margin-right: 5px;
-  width: 44px;
-}
 .reviews .review {
   flex-direction: row;
   display: flex;
@@ -194,6 +214,13 @@ nav ul li:last-child {
   flex-direction: row;
   align-self: start;
   min-width: 200px;
+}
+.reviews .review .avatar {
+  width: 52px;
+}
+.reviews .review .avatar img {
+  margin-right: 5px;
+  width: 44px;
 }
 .reviews .review .comment {
   display: flex;
@@ -216,6 +243,14 @@ nav ul li:last-child {
 .reviews .review:last-child .comment {
   border: 0;
   padding-bottom: 0;
+}
+/**************** USER ****************/
+.user .avatar {
+  width: 50%;
+  margin: auto;
+}
+.user .avatar img {
+  width: 100%;
 }
 .plan ul {
   display: flex;
