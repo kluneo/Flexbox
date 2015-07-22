@@ -245,8 +245,22 @@ nav ul li:last-child {
   padding-bottom: 0;
 }
 /**************** USER ****************/
+@media screen and (max-width: 600px) {
+  .user .userProfil {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+.user .box {
+  flex: 1;
+}
+.user .userProfil {
+  align-items: center;
+}
 .user .avatar {
-  width: 50%;
+  width: 100%;
+  min-width: 200px;
+  max-width: 150px;
   margin: auto;
 }
 .user .avatar img {
