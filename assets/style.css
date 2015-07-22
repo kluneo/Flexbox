@@ -94,7 +94,7 @@ hr {
 .box {
   padding: 15px;
   flex-flow: row wrap;
-  margin: 20px;
+  margin: 10px;
   background: #fff;
   border-radius: 5px;
   min-width: 230px;
@@ -245,22 +245,16 @@ nav ul li:last-child {
   padding-bottom: 0;
 }
 /**************** USER ****************/
-@media screen and (max-width: 600px) {
-  .user .userProfil {
-    -webkit-flex-direction: column;
-    flex-direction: column;
-  }
-}
 .user .box {
   flex: 1;
+  display: flex;
 }
-.user .userProfil {
-  align-items: center;
+.user .bottom {
+  align-self: flex-end;
+  width: 100%;
 }
 .user .avatar {
-  width: 100%;
-  min-width: 200px;
-  max-width: 150px;
+  width: 50%;
   margin: auto;
 }
 .user .avatar img {
